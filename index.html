@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEHTA IS BACK {original} - Official Telegram</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-glow: #00e676;
+            --telegram-blue: #0088cc;
+            --gold: #ffb703;
+            --bg-dark: #050811;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(0, 136, 204, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(0, 230, 118, 0.1) 0%, transparent 50%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7),
+                        0 0 30px rgba(0, 230, 118, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0088cc, var(--primary-glow), var(--gold));
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.3);
+        }
+
+        .badge-verified {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: #0088cc;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border: 2px solid #0f172a;
+        }
+
+        .channel-name {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .channel-tag {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .subs-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 230, 118, 0.12);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+            color: var(--primary-glow);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, rgba(255, 183, 3, 0.12), rgba(255, 183, 3, 0.02));
+            border-left: 4px solid var(--gold);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 22px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px;
+            border-radius: 14px;
+        }
+
+        .stat-card i {
+            font-size: 20px;
+            color: var(--primary-glow);
+            margin-bottom: 6px;
+        }
+
+        .stat-card div {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            margin-top: 2px;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #0088cc, #005580);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 18px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 136, 204, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+            70% { box-shadow: 0 0 0 16px rgba(0, 136, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #0099e6, #006699);
+        }
+
+        .disclaimer {
+            margin-top: 22px;
+            font-size: 11px;
+            color: #64748b;
+            line-height: 1.5;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo Image Linked -->
+        <div class="profile-wrapper">
+            <img src="https://i.ibb.co/JFd8nRNK/IMG-20260815-204945-577.jpg" alt="MEHTA IS BACK Logo" class="profile-img">
+            <div class="badge-verified"><i class="fa-solid fa-check"></i></div>
+        </div>
+
+        <h1 class="channel-name">MEHTA IS BACK</h1>
+        <div class="channel-tag">{original}</div>
+
+        <div class="subs-pill">
+            <i class="fa-solid fa-users"></i> 23,700+ Subscribers
+        </div>
+
+        <div class="quote-box">
+            "हम नहीं हमारे परिणाम बोलते हैं"
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>Daily Analysis</div>
+                <strong>Nifty & BankNifty</strong>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>Market Guidance</div>
+                <strong>Stock Trading</strong>
+            </div>
+        </div>
+
+        <!-- Replace YOUR_TELEGRAM_LINK with your Telegram invite link -->
+        <a href="https://t.me/+6yDW09s7qYg2MjI1" class="cta-button" target="_blank">
+            <i class="fa-brands fa-telegram fa-lg"></i>
+            JOIN TELEGRAM CHANNEL
+        </a>
+
+        <div class="disclaimer">
+            <i class="fa-solid fa-triangle-exclamation"></i> <strong>Disclaimer:</strong> Information shared here is strictly for educational purposes only. We are not SEBI registered. Consult your financial advisor before taking any financial decisions.
+        </div>
+    </div>
+
+</body>
+</html>
